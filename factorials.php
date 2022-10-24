@@ -1,9 +1,12 @@
-<?php  
-$num = 4;  
-$factorial = 1;  
-for ($x=$num; $x>=1; $x--)   
-{  
-  $factorial = $factorial * $x;  
-}  
-echo "Factorial of $num is $factorial";  
-?>
+<?php    
+function factorial($n)    
+{    
+    if ($n < 0)    
+        return -1; /*Wrong value*/    
+    if ($n == 0)    
+        return 1; /*Terminating condition*/    
+    return ($n * factorial ($n -1));    
+}    
+    
+echo factorial(5);    
+?>    
